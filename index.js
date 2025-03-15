@@ -3,6 +3,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const { Connection, PublicKey, LAMPORTS_PER_SOL } = require('@solana/web3.js');
 const fs = require('fs');
 const axios = require('axios');
+const express = require('express');
+const app = express();
 
 // Telegram configuration
 const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -724,3 +726,11 @@ function startPeriodicChecking() {
 // Start the bot
 console.log('جاري بدء تشغيل البوت...');
 startPeriodicChecking();
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+
+app.get('/', (req, res) => {
+  res.send('¡Bot activo!');
+});
