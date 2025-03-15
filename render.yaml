@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: solana-wallet-monitor-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ALLOWED_TELEGRAM_USERS
+        sync: false
+      - key: SOLANA_RPC_URL
+        sync: false
+      - key: MIN_SOL_AMOUNT
+        sync: false
+      - key: HELIUS_API_KEY
+        sync: false
+      - key: SOLSCAN_API_KEY
+        sync: false
+      - key: WALLET_ADDRESSES
+        sync: false

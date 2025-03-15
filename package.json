@@ -1,0 +1,15 @@
+{
+  "name": "solana-wallet-monitor-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot to monitor Solana wallet transactions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.78.5",
+    "axios": "^1.8.3",
+    "node-telegram-bot-api": "^0.64.0",
+    "dotenv": "^16.3.1"
+  }
+}
